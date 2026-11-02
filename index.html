@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Godasse — magasin de chaussures femmes, hommes et enfants à Charleville-Mézières</title>
+<meta name="description" content="La Godasse, 30 rue Bourbon à Charleville-Mézières. Chaussures femmes, hommes et spécialistes enfants. Kickers, Victoria, Shoo Pom, Vanessa Wu, Méduse et une vingtaine d'autres marques.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Sen:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.jpg">
+<style>
+:root{
+  --terre:#C06A4C; --terre-f:#8F4428; --terre-vl:#F8EBE4;
+  --bois:#A98869; --bois-f:#7C5F46;
+  --encre:#2A2522; --encre-2:#5A524C; --encre-3:#8C8278;
+  --creme:#FBF7F2; --creme-2:#F3ECE3; --creme-3:#E5DBCE;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--creme);color:var(--encre);
+  font:400 17px/1.65 'Sen',system-ui,-apple-system,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'Antic Didone',Georgia,serif;font-size:13px;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--terre-f);margin:0 0 14px}
+h1,h2,h3{font-family:'Antic Didone',Georgia,serif;font-weight:400;line-height:1.12;margin:0}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:.01em}
+h3{font-size:22px}
+p{margin:0 0 16px}
+
+/* barre */
+.bar{position:sticky;top:0;z-index:40;background:rgba(251,247,242,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--creme-3)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  min-height:62px;flex-wrap:wrap}
+.brand{font-family:'Antic Didone',Georgia,serif;font-size:21px;letter-spacing:.05em}
+.brand b{font-weight:400;color:var(--terre-f)}
+.navlinks{display:flex;gap:22px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.navlinks a{text-decoration:none;color:var(--encre-2);padding:4px 0;border-bottom:1px solid transparent}
+.navlinks a:hover{color:var(--terre-f);border-color:var(--terre)}
+
+/* hero */
+.hero{padding:58px 0 54px;background:linear-gradient(180deg,var(--creme) 0%,var(--creme-2) 100%)}
+.hero .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(38px,5.1vw,58px)}
+.hero .sub{font-size:19px;color:var(--encre-2);max-width:30em;margin-top:18px}
+.facts{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:9px;
+  font-size:16px;color:var(--encre-2)}
+.facts li{display:flex;gap:11px;align-items:baseline}
+.facts span{color:var(--terre);font-size:13px}
+.cta{display:inline-flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:2px;text-decoration:none;
+  font-size:15px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
+.btn-p{background:var(--terre-f);color:#fff}
+.btn-p:hover{background:var(--encre)}
+.btn-s{border:1px solid var(--bois);color:var(--bois-f)}
+.btn-s:hover{background:var(--creme-2)}
+.shot{position:relative}
+.shot img{width:100%;height:auto;border-radius:2px}
+.shot figcaption{font-size:13px;color:var(--encre-3);margin-top:10px;letter-spacing:.03em}
+
+/* bandeau */
+.strip{background:var(--encre);color:var(--creme);padding:17px 0}
+.strip .wrap{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+  font-family:'Antic Didone',Georgia,serif;font-size:14px;letter-spacing:.26em;text-transform:uppercase}
+
+/* sections */
+section{padding:74px 0}
+.sec-head{max-width:46em;margin-bottom:40px}
+.sec-head p{color:var(--encre-2)}
+
+/* rayons */
+.rayons{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.rayon{background:#fff;border:1px solid var(--creme-3);border-radius:2px;overflow:hidden;
+  display:flex;flex-direction:column}
+.rayon .ph{height:300px;overflow:hidden;background:var(--creme-2)}
+.rayon .ph img{width:100%;height:100%;object-fit:cover}
+.rayon .tx{padding:24px 24px 26px}
+.rayon h3{margin-bottom:10px}
+.rayon p{font-size:15.5px;color:var(--encre-2);margin:0}
+
+/* marques */
+.marques{background:var(--terre-vl)}
+.mlist{display:flex;flex-wrap:wrap;gap:10px}
+.mlist span{background:#fff;border:1px solid var(--creme-3);border-radius:999px;
+  padding:9px 18px;font-size:15px;letter-spacing:.02em}
+.mnote{margin-top:22px;font-size:15px;color:var(--encre-2)}
+
+/* galerie */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal figure{margin:0;overflow:hidden;border-radius:2px;background:var(--creme-2)}
+.gal img{width:100%;height:270px;object-fit:cover;transition:transform .4s}
+.gal figure:hover img{transform:scale(1.035)}
+.gal .tall img{height:270px}
+
+/* infos */
+.infos{background:var(--creme-2)}
+.icols{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:start}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--creme-3)}
+.hours td:last-child{text-align:right;color:var(--encre-2);font-variant-numeric:tabular-nums}
+.hours tr:last-child td{border-bottom:0}
+.hours .off td:last-child{color:var(--encre-3)}
+.contact{list-style:none;margin:22px 0 0;padding:0;font-size:16px;line-height:2}
+.contact a{color:var(--terre-f)}
+
+/* aconf */
+.aconf{display:inline-block;vertical-align:middle;margin-left:7px;padding:2px 8px;
+  border:1px dashed var(--terre);border-radius:999px;color:var(--terre-f);
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+
+/* footer */
+footer{background:var(--encre);color:#CFC6BC;padding:46px 0 40px;font-size:14.5px}
+footer a{color:#E8DED3}
+.fgrid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap}
+.fbrand{font-family:'Antic Didone',Georgia,serif;font-size:22px;color:var(--creme);letter-spacing:.05em}
+
+/* badge demo */
+.demo{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--encre);color:var(--creme);
+  text-decoration:none;font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;
+  padding:10px 15px;border-radius:2px;border:1px solid #4A423C}
+.demo:hover{background:var(--terre-f);border-color:var(--terre-f)}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .rayons{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .icols{grid-template-columns:1fr;gap:38px}
+  .navlinks{display:none}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:54px 0}
+  .gal img{height:210px}
+  .strip .wrap{gap:18px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="brand">la <b>godasse</b></div>
+  <nav class="navlinks">
+    <a href="#rayons">Les rayons</a>
+    <a href="#marques">Les marques</a>
+    <a href="#boutique">La boutique</a>
+    <a href="#infos">Horaires</a>
+  </nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Charleville-Mézières · rue Bourbon</p>
+    <h1>Chaussures femmes,<br>hommes et spécialistes enfants.</h1>
+    <p class="sub">Une boutique de centre-ville, une vingtaine de marques en rayon et des conseils donnés de vive voix. Du premier pas de bébé aux talons du samedi soir.</p>
+    <ul class="facts">
+      <li><span>◆</span> 30 rue Bourbon, à deux pas de la place Ducale</li>
+      <li><span>◆</span> Ouvert du lundi au samedi</li>
+      <li><span>◆</span> 4,8 sur 5 sur Google, sur 49 avis</li>
+    </ul>
+    <div class="cta">
+      <a class="btn btn-p" href="#infos">Horaires et accès</a>
+      <a class="btn btn-s" href="tel:+33324560847">03 24 56 08 47</a>
+    </div>
+  </div>
+  <figure class="shot" style="margin:0">
+    <img src="devanture.jpg" alt="La devanture de La Godasse, rue Bourbon à Charleville-Mézières" width="1314" height="780">
+    <figcaption>La devanture, rue Bourbon. La vitrine de gauche est celle des enfants.</figcaption>
+  </figure>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div>Femme</div><div>Homme</div><div>Enfant</div><div>Depuis 2021</div>
+</div></div>
+
+<section id="rayons"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Les rayons</p>
+    <h2>Trois rayons, une seule adresse</h2>
+    <p>La boutique est née en 2021 au 30 rue Bourbon. Le rayon enfant est le dernier arrivé : La Godasse a repris le flambeau de la chaussure pour enfants après la fermeture d'une maison du centre-ville qui l'avait tenu trente ans. <span class="aconf">à confirmer</span></p>
+  </div>
+  <div class="rayons">
+    <article class="rayon">
+      <div class="ph"><img src="sandales-compensees.jpg" alt="Sandales compensées en daim camel" width="675" height="780"></div>
+      <div class="tx">
+        <h3>Femme</h3>
+        <p>Sandales, compensées, bottines à talon, escarpins et baskets. Les arrivages suivent la saison et partent vite.</p>
+      </div>
+    </article>
+    <article class="rayon">
+      <div class="ph"><img src="baskets-wedo.jpg" alt="Baskets homme We Do bleu marine, vertes et orange" width="438" height="330"></div>
+      <div class="tx">
+        <h3>Homme</h3>
+        <p>Baskets de ville, derbies et boots. Un rayon installé au fond de la boutique, sous la fresque.</p>
+      </div>
+    </article>
+    <article class="rayon">
+      <div class="ph"><img src="enfant-shoopom.jpg" alt="Chaussure bébé Shoo Pom rose pailletée et dorée" width="624" height="780"></div>
+      <div class="tx">
+        <h3>Enfant</h3>
+        <p>Chaussons premiers pas en cuir souple, baskets à scratch, modèles à paillettes. C'est le rayon dont la boutique a fait sa spécialité.</p>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="marques" id="marques"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Les marques</p>
+    <h2>Ce qu'on trouve en rayon</h2>
+    <p>La liste publiée par les Vitrines de Charleville-Mézières, complétée par les marques repérées en boutique.</p>
+  </div>
+  <div class="mlist">
+    <span>Kickers</span><span>Victoria</span><span>Shoo Pom</span><span>GBB</span>
+    <span>Vanessa Wu</span><span>Milë Mila</span><span>Alpe</span><span>Cotemer</span>
+    <span>Bohm</span><span>Easy Peasy</span><span>Maroli</span><span>Carmela</span>
+    <span>Emilie Karston</span><span>Toni Pons</span><span>Arima</span><span>Méduse</span>
+    <span>Bagatt</span><span>We Do</span><span>Salamander</span>
+  </div>
+  <p class="mnote">La liste complète des marques reste à arrêter avec la boutique. <span class="aconf">à confirmer</span></p>
+</div></section>
+
+<section id="boutique"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">La boutique</p>
+    <h2>Un piano, une fresque et beaucoup de boîtes</h2>
+    <p>Mur terracotta, présentoirs en bois brut, un vieux piano droit au fond du magasin. On s'assoit, on essaie, on prend le temps.</p>
+  </div>
+  <div class="gal">
+    <figure><img src="interieur-piano.jpg" alt="L'intérieur de la boutique, mur terracotta et piano droit" width="585" height="780"></figure>
+    <figure><img src="rayon-homme.jpg" alt="Le rayon homme sous la fresque murale" width="585" height="780"></figure>
+    <figure><img src="vitrine.jpg" alt="La vitrine de La Godasse rue Bourbon" width="585" height="780"></figure>
+    <figure><img src="chaussons-bebe.jpg" alt="Chaussons bébé en cuir souple, motifs renard, panda et tigre" width="588" height="780"></figure>
+    <figure><img src="kickers.jpg" alt="Baskets enfant Kickers sur leur boîte" width="438" height="780"></figure>
+    <figure><img src="victoria.jpg" alt="Baskets Victoria blanches et dorées" width="438" height="586"></figure>
+    <figure><img src="sandales.jpg" alt="Sandales dorées posées sur une pochette La Godasse" width="438" height="780"></figure>
+    <figure><img src="enfant-gbb.jpg" alt="Basket enfant GBB bleue et jaune en cuir" width="438" height="577"></figure>
+  </div>
+</div></section>
+
+<section class="infos" id="infos"><div class="wrap">
+  <div class="icols">
+    <div>
+      <p class="eyebrow">Horaires</p>
+      <h2>Quand venir</h2>
+      <table class="hours">
+        <tr><td>Lundi</td><td>14h00 – 19h00</td></tr>
+        <tr><td>Mardi</td><td>10h00 – 12h00 · 14h00 – 19h00</td></tr>
+        <tr><td>Mercredi</td><td>10h00 – 12h00 · 14h00 – 19h00</td></tr>
+        <tr><td>Jeudi</td><td>10h00 – 12h00 · 14h00 – 19h00</td></tr>
+        <tr><td>Vendredi</td><td>10h00 – 19h00</td></tr>
+        <tr><td>Samedi</td><td>10h00 – 19h00</td></tr>
+        <tr class="off"><td>Dimanche</td><td>Fermé</td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="eyebrow">Accès</p>
+      <h2>Nous trouver</h2>
+      <ul class="contact">
+        <li>30 rue Bourbon, 08000 Charleville-Mézières</li>
+        <li><a href="tel:+33324560847">03 24 56 08 47</a></li>
+        <li><a href="mailto:lagodassecharleville@gmail.com">lagodassecharleville@gmail.com</a></li>
+        <li>Achats et retrait en magasin</li>
+        <li>Membre des Vitrines de Charleville-Mézières</li>
+      </ul>
+      <p style="margin-top:20px;color:var(--encre-2);font-size:15.5px">Rue Bourbon est piétonne et relie la place Ducale à la gare. Les parkings de la place Ducale et de la place Winston Churchill sont à moins de cinq minutes à pied. <span class="aconf">à confirmer</span></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <div class="fbrand">la godasse</div>
+      <p style="margin:10px 0 0">30 rue Bourbon, 08000 Charleville-Mézières<br>03 24 56 08 47</p>
+    </div>
+    <div>
+      <p style="margin:0">Du lundi au samedi<br>Fermé le dimanche</p>
+    </div>
+    <div>
+      <p style="margin:0"><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </div>
+</div></footer>
+
+<a class="demo" href="https://kraon.netlify.app/offre" target="_blank" rel="noopener">Démo KRAON</a>
+
+</body>
+</html>
